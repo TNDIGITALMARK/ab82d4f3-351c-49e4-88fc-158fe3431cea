@@ -5,82 +5,92 @@ All colors MUST be HSL.
 */
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  /* AI Learning Hub Dark Theme - Primary Colors */
+  --ai-dark-primary: 213 47% 14%; /* #1a2b47 */
+  --ai-dark-secondary: 210 67% 8%; /* #0a1525 */
+  --ai-teal-primary: 187 100% 50%; /* #00d4ff */
+  --ai-purple-primary: 270 65% 62%; /* #a742f5 */
+  --ai-white: 0 0% 100%; /* #ffffff */
 
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  /* Light theme fallback (will primarily use dark) */
+  --background: var(--ai-white);
+  --foreground: var(--ai-dark-primary);
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
+  --card: var(--ai-white);
+  --card-foreground: var(--ai-dark-primary);
 
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
+  --popover: var(--ai-white);
+  --popover-foreground: var(--ai-dark-primary);
+
+  --primary: var(--ai-teal-primary);
+  --primary-foreground: var(--ai-white);
 
   --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --secondary-foreground: var(--ai-dark-primary);
 
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
 
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --accent: var(--ai-purple-primary);
+  --accent-foreground: var(--ai-white);
 
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: var(--ai-white);
 
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
+  --ring: var(--ai-teal-primary);
 
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 
-  --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 5.3% 26.1%;
-  --sidebar-primary: 240 5.9% 10%;
-  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-background: var(--ai-white);
+  --sidebar-foreground: var(--ai-dark-primary);
+  --sidebar-primary: var(--ai-teal-primary);
+  --sidebar-primary-foreground: var(--ai-white);
   --sidebar-accent: 240 4.8% 95.9%;
-  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-accent-foreground: var(--ai-dark-primary);
   --sidebar-border: 220 13% 91%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  --sidebar-ring: var(--ai-teal-primary);
 }
 
 .dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
+  /* AI Learning Hub Primary Dark Theme */
+  --background: var(--ai-dark-secondary);
+  --foreground: var(--ai-white);
 
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
+  --card: var(--ai-dark-primary);
+  --card-foreground: var(--ai-white);
 
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
+  --popover: var(--ai-dark-primary);
+  --popover-foreground: var(--ai-white);
 
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --primary: var(--ai-teal-primary);
+  --primary-foreground: var(--ai-dark-primary);
 
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: var(--ai-dark-primary);
+  --secondary-foreground: var(--ai-white);
 
-  --muted: 217.2 32.6% 17.5%;
+  --muted: 215 25% 25%;
   --muted-foreground: 215 20.2% 65.1%;
 
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --accent: var(--ai-purple-primary);
+  --accent-foreground: var(--ai-white);
 
   --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: var(--ai-white);
 
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-  --sidebar-background: 240 5.9% 10%;
-  --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 224.3 76.3% 48%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 240 4.8% 95.9%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  --border: 215 25% 25%;
+  --input: 215 25% 25%;
+  --ring: var(--ai-teal-primary);
+
+  --sidebar-background: var(--ai-dark-primary);
+  --sidebar-foreground: var(--ai-white);
+  --sidebar-primary: var(--ai-teal-primary);
+  --sidebar-primary-foreground: var(--ai-dark-primary);
+  --sidebar-accent: 215 25% 25%;
+  --sidebar-accent-foreground: var(--ai-white);
+  --sidebar-border: 215 25% 25%;
+  --sidebar-ring: var(--ai-teal-primary);
 }
 
 @theme {
@@ -157,7 +167,145 @@ All colors MUST be HSL.
   border-color: hsl(var(--border));
 }
 
+/* Custom Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500;600&display=swap');
+
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* AI Learning Hub Custom Styles */
+.font-heading {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-weight: 700;
+}
+
+.font-body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Neural Network Background Pattern */
+.neural-bg {
+  background:
+    radial-gradient(circle at 25% 25%, hsl(var(--ai-teal-primary) / 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 75% 75%, hsl(var(--ai-purple-primary) / 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 50% 50%, hsl(var(--ai-teal-primary) / 0.05) 0%, transparent 50%);
+}
+
+/* Glowing Effects */
+.glow-teal {
+  box-shadow: 0 0 20px hsl(var(--ai-teal-primary) / 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px hsl(var(--ai-purple-primary) / 0.3);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(var(--ai-teal-primary)), hsl(var(--ai-purple-primary)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Glass Morphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hover Animations */
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px hsl(var(--ai-teal-primary) / 0.2);
+}
+
+/* Floating Animation */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Pulse Animation */
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--ai-teal-primary) / 0.3); }
+  50% { box-shadow: 0 0 30px hsl(var(--ai-teal-primary) / 0.6), 0 0 40px hsl(var(--ai-teal-primary) / 0.4); }
+}
+
+/* Neural Network Lines Animation */
+.neural-lines {
+  background-image:
+    linear-gradient(45deg, hsl(var(--ai-teal-primary) / 0.1) 1px, transparent 1px),
+    linear-gradient(-45deg, hsl(var(--ai-purple-primary) / 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: neural-flow 10s linear infinite;
+}
+
+@keyframes neural-flow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 40px 40px; }
+}
+
+/* Futuristic Button Styles */
+.btn-futuristic {
+  position: relative;
+  background: linear-gradient(135deg, hsl(var(--ai-teal-primary)), hsl(var(--ai-purple-primary)));
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.btn-futuristic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-futuristic:hover::before {
+  left: 100%;
+}
+
+.btn-futuristic:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px hsl(var(--ai-teal-primary) / 0.4);
 }
